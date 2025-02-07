@@ -9,7 +9,7 @@ downloadScript() {
 }
 
 echo "${TITLE}Installing Required Packages${NORMAL}"
-sudo apt -y install s-tui btop dmidecode lm-sensors tmux
+sudo apt -y install s-tui btop dmidecode lm-sensors tmux pip
 # sudo sensors-detect --auto
 
 echo "${TITLE}Downloading Scripts${NORMAL}"
