@@ -3,7 +3,7 @@ TITLE="\033[31m"
 NORMAL="\033[0m"
 BASE_URL="https://raw.githubusercontent.com/SSEHUB/AI-Performance-Analytics/refs/heads/main/"
 
-downoadScript() {
+downloadScript() {
     curl -fsSL "${BASE_URL}/$1" -o $1
     sudo chmod +x $1
 }
