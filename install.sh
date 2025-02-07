@@ -16,10 +16,9 @@ echo "${TITLE}Downloading Scripts${NORMAL}"
 downloadScript cpu_monitor.sh
 downloadScript gpu_monitor.sh
 downloadScript ram_monitor.sh
-
-curl -fsSL "${BASE_URL}/computeAvg.sh" -o computeAvg.sh
-sudo chmod +x computeAvg.sh
-
-curl -fsSL "${BASE_URL}/ram_monitor.sh" -o ram_monitor.sh
-sudo chmod +x ram_monitor.sh
+downloadScript computeAvg.sh
+downloadScript perftest.sh
+downloadScript dashboard.tmux
+downloadScript stresstext.tmux
+downloadScript modded-nogpt.run.sh
 
