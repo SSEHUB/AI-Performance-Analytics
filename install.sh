@@ -8,5 +8,6 @@ sudo apt -y install s-tui btop dmidecode lm-sensors tmux
 # sudo sensors-detect --auto
 
 echo -e "${TITLE}Downloading Scripts${NORMAL}"
-curl -fsSL "${BASE_URL}/cpu_monitor.sh"
+curl -fsSL "${BASE_URL}/cpu_monitor.sh" -o cpu_monitor.sh
+sudo chmod +x cpu_monitor.sh
 
