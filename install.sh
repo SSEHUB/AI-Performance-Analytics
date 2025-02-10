@@ -20,6 +20,7 @@ downloadScript computeAvg.sh
 downloadScript perftest.sh
 downloadScript dashboard.tmux
 downloadScript stresstext.tmux
+downloadScript modded-nogpt.run.sh
 
 echo -e "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
 git clone https://github.com/kschmid/modded-nanogpt && cd modded-nanogpt
@@ -28,4 +29,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 pip install --pre torch==2.6.0.dev20241231+cu126 --index-url https://download.pytorch.org/whl/nightly/cu126 --upgrade # install torch 2.6.0
 python3 data/cached_fineweb10B.py 8 # downloads only the first 0.8B training tokens to save time
+rm -f run.sh
 cd -
+mv modded-nogpt.run.sh modded-nanogpt/run.sh
