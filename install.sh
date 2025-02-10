@@ -24,6 +24,7 @@ downloadScript modded-nogpt.run.sh
 
 echo -e "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
 git clone https://github.com/KellerJordan/modded-nanogpt.git && cd modded-nanogpt
+git checkout 8fedef2af470d5f693e55e73f4304b67800cb139
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
