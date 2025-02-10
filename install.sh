@@ -20,7 +20,6 @@ downloadScript computeAvg.sh
 downloadScript perftest.sh
 downloadScript dashboard.tmux
 downloadScript stresstext.tmux
-downloadScript modded-nogpt.run.sh
 
 echo -e "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
 git clone https://github.com/kschmid/modded-nanogpt && cd modded-nanogpt
