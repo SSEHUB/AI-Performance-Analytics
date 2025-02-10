@@ -12,6 +12,7 @@ fi
 BATCH_SIZE=${2:-64}
 
 echo "torchrun --standalone --nproc_per_node=$1 train_gpt.py $1 $BATCH_SIZE"
+source $(dirname "$0")/venv/bin/activate
 torchrun --standalone --nproc_per_node=$1 train_gpt.py $1 $BATCH_SIZE
 # torchrun --standalone --nproc_per_node=$ train_gpt.py
 
