@@ -23,8 +23,7 @@ downloadScript stresstext.tmux
 downloadScript modded-nogpt.run.sh
 
 echo -e "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
-git clone https://github.com/KellerJordan/modded-nanogpt.git && cd modded-nanogpt
-git checkout f503c83129d2cfe4def56c81c7cbc876d1489fb2
+git clone https://github.com/kschmid/modded-nanogpt && cd modded-nanogpt
 python3 -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
