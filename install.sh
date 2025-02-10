@@ -8,11 +8,11 @@ downloadScript() {
     sudo chmod +x $1
 }
 
-echo "${TITLE}Installing Required Packages${NORMAL}"
+echo -e "${TITLE}Installing Required Packages${NORMAL}"
 sudo apt -y install s-tui btop dmidecode lm-sensors tmux
 # sudo sensors-detect --auto
 
-echo "${TITLE}Downloading Scripts${NORMAL}"
+echo -e "${TITLE}Downloading Scripts${NORMAL}"
 downloadScript cpu_monitor.sh
 downloadScript gpu_monitor.sh
 downloadScript ram_monitor.sh
@@ -22,7 +22,7 @@ downloadScript dashboard.tmux
 downloadScript stresstext.tmux
 downloadScript modded-nogpt.run.sh
 
-echo "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
+echo -e "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
 git clone https://github.com/KellerJordan/modded-nanogpt.git && cd modded-nanogpt
 python3 -m venv venv
 source venv/bin/activate
