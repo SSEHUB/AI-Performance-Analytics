@@ -40,6 +40,7 @@ if ! tmux has-session -t $SESSION 2>/dev/null; then
     tmux select-pane -t $SESSION:0.4
 
     # Set key bindings
+    tmux bind-key -n F2 switch-client -t Benchmark
     tmux bind-key -n F10 detach-client
     tmux bind-key -n F12 kill-session
     tmux bind-key -n C-Right select-pane -R  # Move right

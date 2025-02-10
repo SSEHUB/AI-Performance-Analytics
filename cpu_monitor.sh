@@ -4,11 +4,11 @@ header() {
     local second=$(date +%S)  # Get the current second
     local color
 
-    if (( second % 2 == 0 )); then
-        color="\e[1A\e[K\033[31;43m"  # Red for even seconds
-    else
+    #if (( second % 2 == 0 )); then
+    #    color="\e[1A\e[K\033[31;43m"  # Red for even seconds
+    #else
         color="\e[1A\e[K\033[33;41m"  # Yellow for odd seconds
-    fi
+    #fi
 
     echo -e "${color}Monitoring MHz per CPU Core\n\033[0m"
 }
