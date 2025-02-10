@@ -9,7 +9,7 @@ downloadScript() {
 }
 
 echo "${TITLE}Installing Required Packages${NORMAL}"
-sudo apt -y install s-tui btop dmidecode lm-sensors tmux pip
+sudo apt -y install s-tui btop dmidecode lm-sensors tmux
 # sudo sensors-detect --auto
 
 echo "${TITLE}Downloading Scripts${NORMAL}"
@@ -24,9 +24,11 @@ downloadScript modded-nogpt.run.sh
 
 echo "${TITLE}Downloading and Preparing Benchmark${NORMAL}"
 git clone https://github.com/KellerJordan/modded-nanogpt.git && cd modded-nanogpt
+python3 -m venv
+source venv/bin/activate
 pip install -r requirements.txt
 pip install --pre torch==2.6.0.dev20241231+cu126 --index-url https://download.pytorch.org/whl/nightly/cu126 --upgrade # install torch 2.6.0
-python data/cached_fineweb10B.py 8 # downloads only the first 0.8B training tokens to save time
+python3 data/cached_fineweb10B.py 8 # downloads only the first 0.8B training tokens to save time
 rm -f run.sh
 cd -
 mv modded-nogpt.run.sh modded-nanogpt/run.sh
